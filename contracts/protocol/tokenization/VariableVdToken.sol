@@ -29,6 +29,7 @@ contract VariableVdToken is VdTokenBase, IVariableVdToken {
     onlyLendingPool
   {
     _incentivesController = incentivesController;
+    emit SetIncentivesController(_underlyingAsset, address(incentivesController));
   }
 
   /**

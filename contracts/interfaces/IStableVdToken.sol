@@ -131,5 +131,7 @@ interface IStableVdToken is IInitializableVdToken {
    **/
   function getIncentivesController() external view returns (IViniumIncentivesController);
 
+  event SetIncentivesController(address asset, address incentivesController);
+
   function setIncentivesController(IViniumIncentivesController incentivesController) external;
 }

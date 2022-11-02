@@ -58,6 +58,7 @@ contract ViToken is
     onlyLendingPool
   {
     _incentivesController = incentivesController;
+    emit SetIncentivesController(_underlyingAsset, address(incentivesController));
   }
 
   /**

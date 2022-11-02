@@ -35,6 +35,7 @@ contract StableVdToken is IStableVdToken, VdTokenBase {
     onlyLendingPool
   {
     _incentivesController = incentivesController;
+    emit SetIncentivesController(_underlyingAsset, address(incentivesController));
   }
 
   /**

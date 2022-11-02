@@ -100,6 +100,8 @@ interface IViToken is IERC20, IScaledBalanceToken, IInitializableViToken {
    **/
   function getIncentivesController() external view returns (IViniumIncentivesController);
 
+  event SetIncentivesController(address asset, address incentivesController);
+
   function setIncentivesController(IViniumIncentivesController incentivesController) external;
 
   /**

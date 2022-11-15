@@ -21,14 +21,7 @@ task('verify:tokens', 'Deploy oracles for dev enviroment')
     await localDRE.run('set-DRE');
     const network = localDRE.network.name as eNetwork;
     const poolConfig = loadPoolConfig(pool);
-    const {
-      ReserveAssets,
-      ReservesConfig,
-      ViTokenNamePrefix,
-      StableVdTokenNamePrefix,
-      VariableVdTokenNamePrefix,
-      SymbolPrefix,
-    } = poolConfig as ICommonConfiguration;
+    const { ReserveAssets, ReservesConfig } = poolConfig as ICommonConfiguration;
     const treasuryAddress = await getTreasuryAddress(poolConfig);
 
     const addressesProvider = await getLendingPoolAddressesProvider();
@@ -43,20 +36,8 @@ task('verify:tokens', 'Deploy oracles for dev enviroment')
     );
 
     const configs = Object.entries(ReservesConfig) as [string, IReserveParams][];
-
-    const tokenImpls = {
-      BTCB: {
-        viBTCB: '0xb4246bc0c00b3949977c16ae78c601b4579dd14b',
-        stableVdBTCB: '0xda0a0568b5ced2bf9c48855e96cb7ba378efb7fa',
-        variableVdBTCB: '0xad5ba66197cf7580991ecec68ae82d2e4d6217df',
-      },
-    };
-
     for (const entry of Object.entries(getParamPerNetwork(ReserveAssets, network))) {
       const [token, tokenAddress] = entry;
-      if (token != 'BTCB') {
-        continue;
-      }
       console.log(`- Verifying ${token} token related contracts`);
       const {
         stableVdTokenAddress,
@@ -78,53 +59,53 @@ task('verify:tokens', 'Deploy oracles for dev enviroment')
         stableRateSlope1,
         stableRateSlope2,
       } = tokenConfig[1].strategy;
-      //
-      // // Proxy Stable Debt
-      // console.log(`\n- Verifying Stable Debt Token proxy...\n`);
-      // await verifyContract(
-      //   eContractid.InitializableAdminUpgradeabilityProxy,
-      //   await getProxy(stableVdTokenAddress),
-      //   [lendingPoolConfigurator.address]
-      // );
-      // //
-      // // // Proxy Variable Debt
-      // // console.log(`\n- Verifying  Debt Token proxy...\n`);
-      // // await verifyContract(
-      // //   eContractid.InitializableAdminUpgradeabilityProxy,
-      // //   await getProxy(variableVdTokenAddress),
-      // //   [lendingPoolConfigurator.address]
-      // // );
-      // //
-      // // // Proxy viToken
-      // // console.log('\n- Verifying viToken proxy...\n');
-      // // await verifyContract(
-      // //   eContractid.InitializableAdminUpgradeabilityProxy,
-      // //   await getProxy(viTokenAddress),
-      // //   [lendingPoolConfigurator.address]
-      // // );
-      // //
-      // // // Strategy Rate
-      // // console.log(`\n- Verifying Strategy rate...\n`);
-      // // await verifyContract(
-      // //   eContractid.DefaultReserveInterestRateStrategy,
-      // //   await getInterestRateStrategy(interestRateStrategyAddress),
-      // //   [
-      // //     addressesProvider.address,
-      // //     optimalUtilizationRate,
-      // //     baseVariableBorrowRate,
-      // //     variableRateSlope1,
-      // //     variableRateSlope2,
-      // //     stableRateSlope1,
-      // //     stableRateSlope2,
-      // //   ]
-      // // );
 
-      const stableDebt = tokenImpls[token][`stableVd${token}`];
-      const variableDebt = tokenImpls[token][`variableVd${token}`];
-      const viToken = tokenImpls[token][`vi${token}`];
-      // const stableDebt = await getAddressById(`stableVd${token}`);
-      // const variableDebt = await getAddressById(`variableVd${token}`);
-      // const viToken = await getAddressById(`vi${token}`);
+      // Proxy Stable Debt
+      console.log(`\n- Verifying Stable Debt Token proxy...\n`);
+      await verifyContract(
+        eContractid.InitializableAdminUpgradeabilityProxy,
+        await getProxy(stableVdTokenAddress),
+        [lendingPoolConfigurator.address]
+      );
+
+      // Proxy Variable Debt
+      console.log(`\n- Verifying  Debt Token proxy...\n`);
+      await verifyContract(
+        eContractid.InitializableAdminUpgradeabilityProxy,
+        await getProxy(variableVdTokenAddress),
+        [lendingPoolConfigurator.address]
+      );
+
+      // Proxy viToken
+      console.log('\n- Verifying viToken proxy...\n');
+      await verifyContract(
+        eContractid.InitializableAdminUpgradeabilityProxy,
+        await getProxy(viTokenAddress),
+        [lendingPoolConfigurator.address]
+      );
+
+      // Strategy Rate
+      console.log(`\n- Verifying Strategy rate...\n`);
+      await verifyContract(
+        eContractid.DefaultReserveInterestRateStrategy,
+        await getInterestRateStrategy(interestRateStrategyAddress),
+        [
+          addressesProvider.address,
+          optimalUtilizationRate,
+          baseVariableBorrowRate,
+          variableRateSlope1,
+          variableRateSlope2,
+          stableRateSlope1,
+          stableRateSlope2,
+        ]
+      );
+
+      // const stableDebt = tokenImpls[token][`stableVd${token}`];
+      // const variableDebt = tokenImpls[token][`variableVd${token}`];
+      // const viToken = tokenImpls[token][`vi${token}`];
+      const stableDebt = await getAddressById(`stableVd${token}`);
+      const variableDebt = await getAddressById(`variableVd${token}`);
+      const viToken = await getAddressById(`vi${token}`);
 
       if (viToken) {
         console.log('\n- Verifying viToken...\n');

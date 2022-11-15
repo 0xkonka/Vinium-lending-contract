@@ -32,8 +32,6 @@ task('verify:general', 'Verify contracts at Etherscan')
     await localDRE.run('set-DRE');
     const network = localDRE.network.name as eNetwork;
     const poolConfig = loadPoolConfig(pool);
-    console.log(poolConfig);
-    console.log('pool name: ', pool);
     const {
       ReserveAssets,
       ReservesConfig,
@@ -60,13 +58,8 @@ task('verify:general', 'Verify contracts at Etherscan')
     const lendingPoolConfiguratorProxy = await getProxy(lendingPoolConfiguratorAddress);
     const lendingPoolCollateralManagerProxy = await getProxy(lendingPoolCollateralManagerAddress);
 
-    console.log('==============: ', all);
     if (all) {
-      console.log(network);
-      console.log(LendingPool);
       const lendingPoolImplAddress = getParamPerNetwork(LendingPool, network);
-      console.log('============== lendingPoolImplAddress: ', lendingPoolImplAddress);
-      console.log(lendingPoolImplAddress);
       const lendingPoolImpl = notFalsyOrZeroAddress(lendingPoolImplAddress)
         ? await getLendingPoolImpl(lendingPoolImplAddress)
         : await getLendingPoolImpl();
@@ -75,10 +68,6 @@ task('verify:general', 'Verify contracts at Etherscan')
         LendingPoolConfigurator,
         network
       );
-      console.log(
-        '============== lendingPoolConfiguratorImplAddress: ',
-        lendingPoolConfiguratorImplAddress
-      );
       const lendingPoolConfiguratorImpl = notFalsyOrZeroAddress(lendingPoolConfiguratorImplAddress)
         ? await getLendingPoolConfiguratorImpl(lendingPoolConfiguratorImplAddress)
         : await getLendingPoolConfiguratorImpl();
@@ -86,10 +75,6 @@ task('verify:general', 'Verify contracts at Etherscan')
       const lendingPoolCollateralManagerImplAddress = getParamPerNetwork(
         LendingPoolCollateralManager,
         network
-      );
-      console.log(
-        '============== lendingPoolCollateralManagerImplAddress: ',
-        lendingPoolCollateralManagerImplAddress
       );
       const lendingPoolCollateralManagerImpl = notFalsyOrZeroAddress(
         lendingPoolCollateralManagerImplAddress
@@ -101,7 +86,6 @@ task('verify:general', 'Verify contracts at Etherscan')
       const walletProvider = await getWalletProvider();
 
       const wethGatewayAddress = getParamPerNetwork(WethGateway, network);
-      console.log('============== wethGatewayAddress: ', wethGatewayAddress);
       const wethGateway = notFalsyOrZeroAddress(wethGatewayAddress)
         ? await getWETHGateway(wethGatewayAddress)
         : await getWETHGateway();

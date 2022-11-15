@@ -1,151 +1,151 @@
 {
   "LendingPoolAddressesProviderRegistry": {
     "avalanche": {
-      "address": "0xfe1eC0BBA48805fA5f34d9D01b8e985e4A9c83F6",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x66B30abed21A7eB493aFAA7D61099F8B7E1b4c4c",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "LendingPoolAddressesProvider": {
     "avalanche": {
-      "address": "0xAb534e276FAE6b2f3b30Eb3fcbb495304d808603",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x25dAfc0a8BBBA57C708d0097f885512d6A99b944",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "ReserveLogic": {
     "avalanche": {
-      "address": "0x5Fc0e8048f504A91131050E0d56bD5a3b898b384",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x434bDD012Efb2fD8E913231b07AD20e82b96b7A0",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "GenericLogic": {
     "avalanche": {
-      "address": "0x5F6930E19503DAAc3Ba11388692B523b9A5B7db1",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x4BE0a26A967A5599897A3c9801f506BFAb5f6DA6",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "ValidationLogic": {
     "avalanche": {
-      "address": "0xBD0bad03fF9Bb42b9A49f91595f8e165A224841F",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x94E39ddb815e319DbB6aD8292D35bFf768f20d21",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "LendingPoolImpl": {
     "avalanche": {
-      "address": "0xf23B9E4Dae5e1123d9d78a9ca1f67c91510Be1A0"
+      "address": "0x0265a10D09B0E2d9E2CeFAB0C39B1C5F2d53eD41"
     }
   },
   "LendingPool": {
     "avalanche": {
-      "address": "0xc246579105cd52a40C0E654CAdEB34c39F2dbe3f"
+      "address": "0x0A0b37422b8e53e9784b141F89FbfF6dF2645D67"
     }
   },
   "LendingPoolConfiguratorImpl": {
     "avalanche": {
-      "address": "0x5FA7eB83A856d232C6c07b816AFE37e6DeFF88CA"
+      "address": "0x0fA01a1260CD07d45052c4C21d311afc78383cc6"
     }
   },
   "LendingPoolConfigurator": {
     "avalanche": {
-      "address": "0xC0c3Cc3aA278955856dA75c0D99946F0C9933486"
+      "address": "0x01590709D0A260439fbCfC26Fce08953da8d1b95"
     }
   },
   "StableAndVariableTokensHelper": {
     "avalanche": {
-      "address": "0x281Fd6967832e62C9dBaB241794Bb36bE9233B09",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x7518E55a23887E289BD27de5166b2Bb8932861e3",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "ViTokensAndRatesHelper": {
     "avalanche": {
-      "address": "0x6564329a88AF559a8A56fDF3C2Cb8798CC24E362",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x8D46b26540719d8d6Acee2c8A087cd02f5175EdF",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "ViToken": {
     "avalanche": {
-      "address": "0xb4246BC0c00b3949977c16ae78C601b4579Dd14B",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x3a783A3DCc5908BA87a8882e911bB7e35def963A",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "StableVdToken": {
     "avalanche": {
-      "address": "0xda0a0568B5ceD2Bf9C48855E96cb7BA378EFb7fa",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x7E0a86F6ba18B4912AB89d45194e29942f217ED7",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "VariableVdToken": {
     "avalanche": {
-      "address": "0xAD5bA66197cF7580991eceC68Ae82d2E4d6217df",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x26A12F20Ee8dD0ae7a28cd8F38fBF8B959784575",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "ViniumOracle": {
     "avalanche": {
-      "address": "0xFC5C922b6A0137FD33E3604663aB468D15C9d4f5",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0xdC86825a065E62cE86f155BdB299795d6Bb4C7dd",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "LendingRateOracle": {
     "avalanche": {
-      "address": "0xCA3eb6E8c67a2B00C5B35E0Fd469d50712017279",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x9feFf7905F8E1aed4481C6dcC195BF0704668A75",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "ViniumProtocolDataProvider": {
     "avalanche": {
-      "address": "0x9cDeEdA907E3D19fD6817e28674DeCD04f47Eb01",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0xcbF406a24D5527D8D0Fc897b44136937A280F9A7",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "WETHGateway": {
     "avalanche": {
-      "address": "0x87EDF69FF8912CfF318FEAd777594B207eA47ada",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0xd16EDd11EF02b7fcddCe8F404793f6731D11A04B",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "DefaultReserveInterestRateStrategy": {
     "avalanche": {
-      "address": "0x05aDdb0dBd5Acb173C2641D27fD9d31Ff1D8a1Ce",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
-    }
-  },
-  "rateStrategyVolatileOne": {
-    "avalanche": {
-      "address": "0x05aDdb0dBd5Acb173C2641D27fD9d31Ff1D8a1Ce"
+      "address": "0x2eBD7C93D7831195B71bDAD51CC7BbaE454fB07d",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "rateStrategyStableOne": {
     "avalanche": {
-      "address": "0x191eb219fa91B0a08aBD4E69A023cE7f2B9e3144"
+      "address": "0x9835Ba291878f21190B69E939E6083cf84789353"
+    }
+  },
+  "rateStrategyVolatileOne": {
+    "avalanche": {
+      "address": "0x2eBD7C93D7831195B71bDAD51CC7BbaE454fB07d"
     }
   },
   "LendingPoolCollateralManagerImpl": {
     "avalanche": {
-      "address": "0x4574257e4A2d9eD86516F01B0d2057f1960dc109"
+      "address": "0x5904a704554F8836f41fA4ce08341cD4b8Bf4415"
     }
   },
   "LendingPoolCollateralManager": {
     "avalanche": {
-      "address": "0x4574257e4A2d9eD86516F01B0d2057f1960dc109",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x5904a704554F8836f41fA4ce08341cD4b8Bf4415",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "WalletBalanceProvider": {
     "avalanche": {
-      "address": "0xfDa48D11eFFdd856D6b1f0213d5B5D6ddEeaB521",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x7369AF947aF3430384fd4489EA49235180dbd3E1",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "UiPoolDataProvider": {
     "avalanche": {
-      "address": "0x3AA0495f31058dCC940e0C17BE10cf23F3C441e6",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0xee8048CA6ed522BcEAcBD97610Dc49253c19395b",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   },
   "UiIncentiveDataProviderV2": {
     "avalanche": {
-      "address": "0x8070BC0ac70c87C16dff3a55Af34EA7D6c1ce25C",
-      "deployer": "0x163DCC4Fe8DfE2305484b7819BBBe736542729de"
+      "address": "0x2a1bbCC3681199D830A80849A52C83a2B3458924",
+      "deployer": "0x1d73913CD66cF13436857C6F8b7157A6cbC8c691"
     }
   }
 }

@@ -88,7 +88,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eAvalancheNetwork.fuji]: '',
   },
   LendingRateOracle: {
-    [eAvalancheNetwork.avalanche]: '0xCA3eb6E8c67a2B00C5B35E0Fd469d50712017279',
+    [eAvalancheNetwork.avalanche]: '0x9feFf7905F8E1aed4481C6dcC195BF0704668A75',
     [eAvalancheNetwork.fuji]: '',
   },
   LendingPoolCollateralManager: {
@@ -112,7 +112,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eAvalancheNetwork.fuji]: '',
   },
   ViniumOracle: {
-    [eAvalancheNetwork.avalanche]: '0xFC5C922b6A0137FD33E3604663aB468D15C9d4f5',
+    [eAvalancheNetwork.avalanche]: '0xdC86825a065E62cE86f155BdB299795d6Bb4C7dd',
     [eAvalancheNetwork.fuji]: '',
   },
   FallbackOracle: {
@@ -121,16 +121,16 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   ChainlinkAggregator: {
     [eAvalancheNetwork.avalanche]: {
-      SAVAX: '0x49bDF0321C4Bf17c9297a6B266F55F3AF3cb0aDE',
+      // SAVAX: '0x49bDF0321C4Bf17c9297a6B266F55F3AF3cb0aDE',
       USDC: '0xF096872672F44d6EBA71458D74fe67F9a77a23B9',
-      USDT: '0xEBE676ee90Fe1112671f19b6B7459bC678B67e8a',
-      DAI: '0x51D7180edA2260cc4F6e4EebB82FEF5c3c2B8300',
-      WETH: '0x976B3D034E162d8bD72D6b9C989d545b839003b0',
-      BTCB: '0x2779D32d5166BAaa2B2b658333bA7e6Ec0C65743',
-      GRAPE: '0xad42d3f890fe384f888d3d1c849ed12e9b8372c8',
-      // VINIUM: '0x3CA13391E9fb38a75330fb28f8cc2eB3D9ceceED',
-      // WBTC: '0x2779D32d5166BAaa2B2b658333bA7e6Ec0C65743',
-      WAVAX: '0x0A77230d17318075983913bC2145DB16C7366156',
+      // USDT: '0xEBE676ee90Fe1112671f19b6B7459bC678B67e8a',
+      // DAI: '0x51D7180edA2260cc4F6e4EebB82FEF5c3c2B8300',
+      // WETH: '0x976B3D034E162d8bD72D6b9C989d545b839003b0',
+      // BTCB: '0x2779D32d5166BAaa2B2b658333bA7e6Ec0C65743',
+      // GRAPE: '0xad42d3f890fe384f888d3d1c849ed12e9b8372c8',
+      // WAVAX: '0x0A77230d17318075983913bC2145DB16C7366156',
+      MIM: '0x54EdAB30a7134A16a54218AE64C73e1DAf48a8Fb',
+      XGRAPE: '0x4cE9DBb0d37668002572e033ba3e1fe47B5BF4dF'
     },
     [eAvalancheNetwork.fuji]: {
       WETH: '0x86d67c3D38D2bCeE722E601025C25a575021c6EA',
@@ -162,7 +162,7 @@ export const CommonsConfig: ICommonConfiguration = {
     [eAvalancheNetwork.fuji]: '0xB45F5C501A22288dfdb897e5f73E189597e09288', // Self-controlled EOA for testing
   },
   IncentivesController: {
-    [eAvalancheNetwork.avalanche]: '0x4a40Cf33cc1D38fc1C4668F398eE17133f5c2636',
-    [eAvalancheNetwork.fuji]: '0xa1EF206fb9a8D8186157FC817fCddcC47727ED55',
+    [eAvalancheNetwork.avalanche]: ZERO_ADDRESS,
+    [eAvalancheNetwork.fuji]: ZERO_ADDRESS,
   },
 };

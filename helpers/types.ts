@@ -22,6 +22,11 @@ export enum ePolygonNetwork {
   mumbai = 'mumbai',
 }
 
+export enum eZksyncNetwork {
+  zksync = 'zksync',
+  zksync_goerli = 'zksync_goerli',
+}
+
 export enum eXDaiNetwork {
   xdai = 'xdai',
 }
@@ -328,6 +333,11 @@ export type iAvalanchePoolAssets<T> = Pick<
   'WETH' | 'DAI' | 'USDT' | 'BTCB' | 'USDC' | 'SAVAX' | 'GRAPE'
 >;
 
+export type iZksyncPoolAssets<T> = Pick<
+  iAssetsWithoutUSD<T>,
+  'WETH' | 'DAI' | 'USDT' | 'BTCB' | 'USDC'
+>;
+
 export type iMultiPoolsAssets<T> = iAssetCommon<T> | iViniumPoolAssets<T>;
 
 export type iViniumPoolTokens<T> = Omit<iViniumPoolAssets<T>, 'ETH'>;
@@ -540,20 +550,12 @@ export interface IViniumConfiguration extends ICommonConfiguration {
   ReservesConfig: iViniumPoolAssets<IReserveParams>;
 }
 
-export interface IAmmConfiguration extends ICommonConfiguration {
-  ReservesConfig: iLpPoolAssets<IReserveParams>;
-}
-
-export interface IMaticConfiguration extends ICommonConfiguration {
-  ReservesConfig: iMaticPoolAssets<IReserveParams>;
-}
-
-export interface IXDAIConfiguration extends ICommonConfiguration {
-  ReservesConfig: iXDAIPoolAssets<IReserveParams>;
-}
-
 export interface IAvalancheConfiguration extends ICommonConfiguration {
   ReservesConfig: iAvalanchePoolAssets<IReserveParams>;
+}
+
+export interface IZksyncConfiguration extends ICommonConfiguration {
+  ReservesConfig: iZksyncPoolAssets<IReserveParams>;
 }
 
 export interface ITokenAddress {
